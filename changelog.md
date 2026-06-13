@@ -3,6 +3,7 @@
 
 - Highlight `&>` `>&|` `>&!` `&>|` and `&>!` as redirection.
   [#942]
+- Highlight redirection targets as paths if possible [#982].
 
 
 # Changes in 0.8.0

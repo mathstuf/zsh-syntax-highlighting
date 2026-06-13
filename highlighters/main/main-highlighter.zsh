@@ -1441,6 +1441,9 @@ _zsh_highlight_main_highlighter_highlight_argument()
     if (( in_redirection )) && [[ $last_arg == *['<>']['&'] && $arg[$1,-1] == (<0->|p|-) ]]; then
       if [[ $arg[$1,-1] == (p|-) ]]; then
         base_style=redirection
+        if _zsh_highlight_main_highlighter_check_path $arg[$1,-1] 0; then
+          base_style=$REPLY
+        fi
       else
         base_style=numeric-fd
       fi
